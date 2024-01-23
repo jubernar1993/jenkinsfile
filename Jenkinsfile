@@ -3,7 +3,11 @@ pipeline {
    
   stages{
     stage('development') {
-      steps{
+     when {
+branch 'main'     
+}
+
+ steps{
         sh 'echo this is a test'
       }
     }
